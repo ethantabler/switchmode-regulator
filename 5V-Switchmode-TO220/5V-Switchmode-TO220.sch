@@ -1,0 +1,258 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "5V Switchmode Voltage Regulator"
+Date "2021-10-04"
+Rev "v1"
+Comp "Ethan Tabler"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:MCP16311MS U?
+U 1 1 615B3F89
+P 5100 3300
+F 0 "U?" H 5100 3867 50  0000 C CNN
+F 1 "MCP16311MS" H 5100 3776 50  0000 C CNN
+F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 5250 3050 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005255B.pdf" H 4800 3850 50  0001 C CNN
+	1    5100 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 615B7382
+P 6500 3350
+F 0 "R1" H 6570 3396 50  0000 L CNN
+F 1 "52.3k" H 6570 3305 50  0000 L CNN
+F 2 "" V 6430 3350 50  0001 C CNN
+F 3 "~" H 6500 3350 50  0001 C CNN
+	1    6500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 615B7E84
+P 6500 3750
+F 0 "R2" H 6570 3796 50  0000 L CNN
+F 1 "10k" H 6570 3705 50  0000 L CNN
+F 2 "" V 6430 3750 50  0001 C CNN
+F 3 "~" H 6500 3750 50  0001 C CNN
+	1    6500 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3300 6400 3300
+Wire Wire Line
+	6400 3300 6400 3550
+Wire Wire Line
+	6400 3550 6500 3550
+Wire Wire Line
+	6500 3550 6500 3500
+Wire Wire Line
+	6500 3600 6500 3550
+Connection ~ 6500 3550
+Wire Wire Line
+	6500 3200 6500 3100
+Wire Wire Line
+	6500 3100 6350 3100
+$Comp
+L Device:L L1
+U 1 1 615B9125
+P 6100 3100
+F 0 "L1" V 6290 3100 50  0000 C CNN
+F 1 "22u" V 6199 3100 50  0000 C CNN
+F 2 "" H 6100 3100 50  0001 C CNN
+F 3 "~" H 6100 3100 50  0001 C CNN
+	1    6100 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 615BB169
+P 5650 3000
+F 0 "C3" V 5421 3000 50  0000 C CNN
+F 1 "100n" V 5512 3000 50  0000 C CNN
+F 2 "" H 5650 3000 50  0001 C CNN
+F 3 "~" H 5650 3000 50  0001 C CNN
+	1    5650 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 3000 5550 3000
+Wire Wire Line
+	5950 3100 5850 3100
+Wire Wire Line
+	5750 3000 5850 3000
+Wire Wire Line
+	5850 3000 5850 3100
+Connection ~ 5850 3100
+Wire Wire Line
+	5850 3100 5500 3100
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 615BD045
+P 5100 4300
+F 0 "J?" V 5254 4112 50  0000 R CNN
+F 1 "Conn_01x03_Male" V 5163 4112 50  0000 R CNN
+F 2 "" H 5100 4300 50  0001 C CNN
+F 3 "~" H 5100 4300 50  0001 C CNN
+	1    5100 4300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5100 3600 5100 3650
+Wire Wire Line
+	5200 3600 5200 3650
+Wire Wire Line
+	5200 3650 5100 3650
+Connection ~ 5100 3650
+Wire Wire Line
+	5100 3650 5100 4100
+Text Notes 5050 4350 3    50   ~ 0
+INPUT
+Text Notes 5150 4350 3    50   ~ 0
+GND
+Text Notes 5250 4350 3    50   ~ 0
+OUTPUT
+Wire Wire Line
+	5000 4100 5000 3650
+Wire Wire Line
+	5000 3650 4500 3650
+Wire Wire Line
+	4500 3650 4500 3100
+Wire Wire Line
+	4500 3000 4700 3000
+Wire Wire Line
+	4700 3100 4500 3100
+Connection ~ 4500 3100
+Wire Wire Line
+	4500 3100 4500 3000
+$Comp
+L Device:C_Small C1
+U 1 1 615C18F6
+P 4500 3850
+F 0 "C1" H 4400 3900 50  0000 R CNN
+F 1 "1u" H 4400 3800 50  0000 R CNN
+F 2 "" H 4500 3850 50  0001 C CNN
+F 3 "~" H 4500 3850 50  0001 C CNN
+	1    4500 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 615C26EA
+P 4650 3850
+F 0 "C2" H 4558 3804 50  0000 R CNN
+F 1 "1u" H 4558 3895 50  0000 R CNN
+F 2 "" H 4650 3850 50  0001 C CNN
+F 3 "~" H 4650 3850 50  0001 C CNN
+	1    4650 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4650 3750 4650 3300
+Wire Wire Line
+	4650 3300 4700 3300
+Wire Wire Line
+	4500 3750 4500 3650
+Connection ~ 4500 3650
+$Comp
+L power:Earth #PWR?
+U 1 1 615C3AAD
+P 4650 4100
+F 0 "#PWR?" H 4650 3850 50  0001 C CNN
+F 1 "Earth" H 4650 3950 50  0001 C CNN
+F 2 "" H 4650 4100 50  0001 C CNN
+F 3 "~" H 4650 4100 50  0001 C CNN
+	1    4650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 615C44D2
+P 4500 4100
+F 0 "#PWR?" H 4500 3850 50  0001 C CNN
+F 1 "Earth" H 4500 3950 50  0001 C CNN
+F 2 "" H 4500 4100 50  0001 C CNN
+F 3 "~" H 4500 4100 50  0001 C CNN
+	1    4500 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3950 4500 4100
+Wire Wire Line
+	4650 3950 4650 4100
+$Comp
+L power:Earth #PWR?
+U 1 1 615C515C
+P 6500 4100
+F 0 "#PWR?" H 6500 3850 50  0001 C CNN
+F 1 "Earth" H 6500 3950 50  0001 C CNN
+F 2 "" H 6500 4100 50  0001 C CNN
+F 3 "~" H 6500 4100 50  0001 C CNN
+	1    6500 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3900 6500 4100
+Text Notes 4750 4000 0    50   ~ 0
+6.3V
+$Comp
+L power:Earth #PWR?
+U 1 1 615C6614
+P 5200 3650
+F 0 "#PWR?" H 5200 3400 50  0001 C CNN
+F 1 "Earth" H 5200 3500 50  0001 C CNN
+F 2 "" H 5200 3650 50  0001 C CNN
+F 3 "~" H 5200 3650 50  0001 C CNN
+	1    5200 3650
+	1    0    0    -1  
+$EndComp
+Connection ~ 5200 3650
+Wire Wire Line
+	5200 4100 5200 3800
+Wire Wire Line
+	6350 3800 6350 3100
+Connection ~ 6350 3100
+Wire Wire Line
+	6350 3100 6250 3100
+$Comp
+L Device:C_Small C4
+U 1 1 615C7D52
+P 6150 3950
+F 0 "C4" H 6058 3904 50  0000 R CNN
+F 1 "1u" H 6058 3995 50  0000 R CNN
+F 2 "" H 6150 3950 50  0001 C CNN
+F 3 "~" H 6150 3950 50  0001 C CNN
+	1    6150 3950
+	-1   0    0    1   
+$EndComp
+Connection ~ 6150 3800
+Wire Wire Line
+	6150 3800 6350 3800
+Wire Wire Line
+	5200 3800 6150 3800
+Wire Wire Line
+	6150 3850 6150 3800
+$Comp
+L power:Earth #PWR?
+U 1 1 615C954D
+P 6150 4100
+F 0 "#PWR?" H 6150 3850 50  0001 C CNN
+F 1 "Earth" H 6150 3950 50  0001 C CNN
+F 2 "" H 6150 4100 50  0001 C CNN
+F 3 "~" H 6150 4100 50  0001 C CNN
+	1    6150 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4050 6150 4100
+Text Notes 6250 4100 0    50   ~ 0
+6.3V
+$EndSCHEMATC
